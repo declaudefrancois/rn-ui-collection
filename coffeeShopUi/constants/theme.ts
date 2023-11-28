@@ -1,6 +1,6 @@
 export default {
   colors: {
-    main: '#C67C4E',
+    main: 'rgba(198, 124, 78, 1)',
     rating: '##FBBE21',
     red: '#ED5151',
     mainMuted: '#FFF5EE',

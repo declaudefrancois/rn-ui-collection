@@ -1,23 +1,16 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import {StatusBar, useColorScheme} from 'react-native';
+import {StatusBar} from 'react-native';
+import {enableLatestRenderer} from 'react-native-maps';
 
-import {Colors} from 'react-native/Libraries/NewAppScreen';
 import StackNavigator from './navigators/StackNavigator';
 
+enableLatestRenderer();
+
 function App(): JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
   return (
     <>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
+      <StatusBar barStyle={'light-content'} backgroundColor={'#000'} />
       <NavigationContainer>
         <StackNavigator />
       </NavigationContainer>

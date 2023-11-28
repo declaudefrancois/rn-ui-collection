@@ -68,6 +68,15 @@ def enableProguardInReleaseBuilds = false
  */
 def jscFlavor = 'org.webkit:android-jsc:+'
 
+def secretPropertiesFile = rootProject.file("secrets.properties")
+
+// Initializes a new Properties() object called secretProperties.
+def secretProperties = new Properties()
+
+// Loads the keystore.properties file into the secretProperties object.
+secretProperties.load(new FileInputStream(secretPropertiesFile))
+
+
 android {
     ndkVersion rootProject.ext.ndkVersion
 
@@ -80,6 +89,7 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        manifestPlaceholders.googleMapsApiKey = secretProperties["GOOGLE_MAPS_API_KEY"]
     }
     signingConfigs {
         debug {
