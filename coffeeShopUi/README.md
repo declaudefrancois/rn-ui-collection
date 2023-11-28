@@ -8,6 +8,13 @@ Project, bootstrapped using [`@react-native-community/cli`](https://github.com/r
 
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
+## Step 0: Add Android `secrets.properties` file
+
+Create a file named `secrets.properties` in the `android` directory of your project with the following contents:
+```
+GOOGLE_MAPS_API_KEY=<your-google-maps-api-key>
+```
+
 ## Step 1: Start the Metro Server
 
 First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.

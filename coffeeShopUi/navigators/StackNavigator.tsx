@@ -8,9 +8,9 @@ import CoffeeDelivery from '../screens/CoffeeDelivery';
 
 export type StackParamList = {
   onboarding: undefined;
-  'coffee-details': {id: string};
-  'coffee-order': {id: string};
-  'coffee-delivery': {id: string};
+  'coffee-details': {id: number};
+  'coffee-order': {id: number};
+  'coffee-delivery': {id: number};
   app: undefined;
 };
 

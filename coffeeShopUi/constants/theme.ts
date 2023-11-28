@@ -2,7 +2,7 @@ export default {
   colors: {
     main: 'rgba(198, 124, 78, 1)',
     rating: '##FBBE21',
-    red: '#ED5151',
+    red: 'rgba(237, 81, 81, 1)',
     mainMuted: '#FFF5EE',
     light: '#DDD',
     green: '#36C07E',
@@ -14,5 +14,6 @@ export default {
     textWhiteMuted: '#A9A9A9',
     textGrayMutedInverse: '#B7B7B7',
     textMuted: '#808080',
+    lightGray: 'rgba(249, 249, 249, 1)',
   },
 };

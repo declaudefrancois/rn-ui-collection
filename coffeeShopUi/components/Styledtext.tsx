@@ -4,7 +4,7 @@ import React, {ComponentProps, ComponentState, PropsWithChildren} from 'react';
 interface StyledtextProps
   extends ComponentProps<typeof Text>,
     PropsWithChildren {
-  weight?: 'light' | 'regular' | 'medium' | 'bold';
+  weight?: 'light' | 'regular' | 'medium' | 'bold' | 'extraBold';
   color?: string;
   size?: number;
   align?: 'left' | 'center' | 'right';
@@ -15,6 +15,7 @@ const fontWeights = {
   regular: '400',
   medium: '500',
   bold: '600',
+  extraBold: '700',
 } as ComponentState;
 
 export default function Styledtext({

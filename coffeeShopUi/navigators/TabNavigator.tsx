@@ -1,16 +1,16 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {RouteProp} from '@react-navigation/native';
+import {StyleSheet, View} from 'react-native';
 import React from 'react';
 
 import Home from '../screens/tab/Home';
 import Shop from '../screens/tab/Shop';
 import Notifications from '../screens/tab/Notifications';
 import Favorites from '../screens/tab/Favorites';
-import {RouteProp} from '@react-navigation/native';
 import HomeIcon from '../components/icons/HomeIcon';
 import HeartIcon from '../components/icons/HeartIcon';
 import NotificationIcons from '../components/icons/NotificationIcons';
 import Bag3Icon from '../components/icons/Bag3Icon';
-import {StyleSheet, View} from 'react-native';
 
 function TabNavigatorIcon({
   color,
@@ -58,6 +58,7 @@ export default function TabNavigator() {
     <Tab.Navigator
       initialRouteName="home"
       screenOptions={({route}) => ({
+        tabBarHideOnKeyboard: true,
         headerShown: false,
         headerTitle: '',
         tabBarIcon: iconProps => TabNavigatorIcon({...iconProps, route}),
@@ -72,6 +73,7 @@ export default function TabNavigator() {
           borderTopStartRadius: 20,
           border: 0,
           justifyContent: 'center',
+          paddingHorizontal: 20,
         },
       })}>
       <Tab.Screen name="home" component={Home} />

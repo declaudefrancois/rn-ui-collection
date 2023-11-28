@@ -3,23 +3,36 @@ import React, {ComponentProps} from 'react';
 import theme from '../constants/theme';
 
 interface ButtonProps extends ComponentProps<typeof Pressable> {
-  size?: 'sm' | 'md' | 'lg';
+  size?: 'sm' | 'md' | 'lg' | 'mdIcon' | 'smIcon';
   bg?: string;
   fullWidth?: boolean;
 }
 
 const sizes = {
   sm: {
-    height: 40,
+    borderRadius: 13,
+    minHeight: 32,
+    padding: 6,
+  },
+  mdIcon: {
+    borderRadius: 13,
+    minHeight: 45,
+    padding: 14,
+  },
+  smIcon: {
+    borderRadius: 10,
+    minHeight: 20,
     padding: 8,
   },
   md: {
-    height: 50,
-    paddingHorizontal: 16,
+    borderRadius: 13,
+    minHeight: 40,
+    paddingHorizontal: 20,
     paddingVertical: 10,
   },
   lg: {
-    height: 60,
+    borderRadius: 13,
+    minHeight: 60,
     padding: 21,
   },
 } as const;
@@ -27,18 +40,25 @@ const sizes = {
 export default function Button({
   children,
   size,
+  bg,
+  style,
   fullWidth = false,
   ...props
 }: ButtonProps) {
-  const style = styles({size, fullWidth}).button;
+  const btnStyle = styles({size, fullWidth}).button;
 
   return (
     <Pressable
-      style={() => ({
-        ...style,
-        backgroundColor: theme.colors.main,
-      })}
-      {...props}>
+      {...props}
+      style={[
+        // @ts-ignore
+        style ? style : {},
+        // @ts-ignore
+        btnStyle,
+        {
+          backgroundColor: bg ?? theme.colors.main,
+        },
+      ]}>
       {children}
     </Pressable>
   );
@@ -47,7 +67,6 @@ export default function Button({
 const styles = StyleSheet.create(
   ({fullWidth, size = 'md'}: Pick<ButtonProps, 'size' | 'fullWidth'>) => ({
     button: {
-      borderRadius: 10,
       justifyContent: 'center',
       alignItems: 'center',
       ...sizes[size],
