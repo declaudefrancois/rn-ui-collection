@@ -6,24 +6,25 @@ Project, bootstrapped using [`@react-native-community/cli`](https://github.com/r
 
 
 # Demo
-https://github.com/declaudefrancois/rn-ui-collection/tree/main/coffeeShopUi/demo/demo.webm
+[demo.webm](https://github.com/declaudefrancois/rn-ui-collection/assets/81987699/f71fa2a8-5d01-4c05-97a1-0ec06fa6c6b6)
+
 
 # Screenshots
 
 ## onboarding
-![Onboarding](demo/onboarding.png)
+<img src="demo/onboarding.png" width="50%">
 
 ## Home
-![Home](demo/home.png)
+<img src="demo/home.png" width="50%">
 
 ## Coffee Details
-![Coffee Details](demo/details.png)
+<img src="demo/details.png" width="50%">
 
 ## order
-![Order](demo/order.png)
+<img src="demo/order.png" width="50%">
 
 ## order delivery (map)
-![Order Delivery](demo/delivery.png)
+<img src="demo/delivery.png" width="50%">
 
 # Getting Started
 
