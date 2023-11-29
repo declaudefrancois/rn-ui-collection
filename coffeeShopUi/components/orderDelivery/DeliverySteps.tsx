@@ -23,7 +23,7 @@ export default function DeliverySteps({
 const styles = StyleSheet.create({
   step: {
     flex: 1,
-    height: 5,
+    height: 4,
     backgroundColor: 'rgba(223, 223, 223, 1)',
     borderRadius: 5,
   },

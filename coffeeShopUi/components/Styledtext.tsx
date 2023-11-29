@@ -18,6 +18,14 @@ const fontWeights = {
   extraBold: '700',
 } as ComponentState;
 
+const fontFamily = {
+  light: 'Sora-Light',
+  regular: 'Sora-Regular',
+  medium: 'Sora-Medium',
+  bold: 'Sora-Bold',
+  extraBold: 'Sora-ExtraBold',
+} as ComponentState;
+
 export default function Styledtext({
   style,
   children,
@@ -29,8 +37,13 @@ export default function Styledtext({
 }: StyledtextProps) {
   const textStyles = [
     style ?? {},
-    styles.text,
-    {fontWeight: fontWeights[weight]!, color, fontSize: size, textAlign: align},
+    {
+      fontWeight: fontWeights[weight]!,
+      color,
+      fontSize: size,
+      textAlign: align,
+      fontFamily: fontFamily[weight]!,
+    },
   ];
 
   return (
@@ -39,9 +52,3 @@ export default function Styledtext({
     </Text>
   );
 }
-
-const styles = StyleSheet.create({
-  text: {
-    fontFamily: 'Sora',
-  },
-});

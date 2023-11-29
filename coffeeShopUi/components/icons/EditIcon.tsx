@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Svg, {SvgProps, Path} from 'react-native-svg';
-const SvgComponent = (props: SvgProps) => (
+const EditIcon = (props: SvgProps) => (
   <Svg width={14} height={15} fill="none" {...props}>
     <Path
       stroke="#303336"
@@ -23,4 +23,4 @@ const SvgComponent = (props: SvgProps) => (
     />
   </Svg>
 );
-export default SvgComponent;
+export default EditIcon;

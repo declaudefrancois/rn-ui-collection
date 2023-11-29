@@ -1,9 +1,9 @@
 import * as React from 'react';
 import Svg, {SvgProps, Path} from 'react-native-svg';
-const PlusIcon = (props: SvgProps) => (
+const PlusIcon = ({stroke = '#fff', ...props}: SvgProps) => (
   <Svg width={16} height={16} fill="none" {...props}>
     <Path
-      stroke="#fff"
+      stroke={stroke}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={1.5}

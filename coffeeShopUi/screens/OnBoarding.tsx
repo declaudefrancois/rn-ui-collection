@@ -32,7 +32,7 @@ export default function OnBoarding({
 
       <View style={styles.contentContainer}>
         <View style={styles.content}>
-          <Styledtext weight="regular" size={48} color="#fff" align="center">
+          <Styledtext weight="bold" size={38} color="#fff" align="center">
             Coffee so good, your taste buds will love it.
           </Styledtext>
 

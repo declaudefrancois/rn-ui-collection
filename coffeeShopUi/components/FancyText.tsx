@@ -9,10 +9,19 @@ interface FancyTextProps {
 export default function FancyText({title}: FancyTextProps) {
   return (
     <View style={styles.container}>
-      <Styledtext weight="extraBold" size={30} color="#fff" style={styles.text}>
-        {title}
-      </Styledtext>
-      <View style={styles.textDeco} />
+      <View>
+        <Styledtext
+          weight="extraBold"
+          size={30}
+          color="#fff"
+          style={styles.text}>
+          {title}
+        </Styledtext>
+        <View style={styles.textDeco} />
+      </View>
+
+      {/* eslint-disable-next-line react-native/no-inline-styles */}
+      <View style={{flex: 1}} />
     </View>
   );
 }

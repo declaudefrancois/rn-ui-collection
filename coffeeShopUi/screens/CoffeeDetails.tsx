@@ -108,7 +108,7 @@ export default function CoffeDetails({
                     text={coffee.description}
                     maxLength={150}
                     textProps={{
-                      size: 16,
+                      size: 15,
                       weight: 'light',
                       color: 'rgba(155, 155, 155, 1)',
                     }}

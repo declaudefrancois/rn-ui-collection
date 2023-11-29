@@ -31,10 +31,6 @@ const coordinates: LatLng[] = [
     latitude: -4.285430530049828,
     longitude: 15.246487693831254,
   },
-  // {
-  //   latitude: -4.290397421321735,
-  //   longitude: 15.247701670014097,
-  // },
   {
     latitude: -4.285273555966987,
     longitude: 15.240938844057027,
@@ -47,7 +43,13 @@ export default function CoffeeDelivery({
   const sheetRef = useRef<BottomSheetMethods>(null);
 
   useEffect(() => {
-    sheetRef.current?.expand();
+    const timeoutId = setTimeout(() => {
+      sheetRef.current?.snapToIndex(1);
+    }, 1000);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
   }, []);
 
   return (

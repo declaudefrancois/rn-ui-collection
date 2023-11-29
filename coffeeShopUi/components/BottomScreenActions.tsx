@@ -7,6 +7,7 @@ export default function BottomScreenActions({children}: PropsWithChildren) {
 
 const styles = StyleSheet.create({
   container: {
+    gap: 5,
     position: 'absolute',
     bottom: 0,
     left: 0,
