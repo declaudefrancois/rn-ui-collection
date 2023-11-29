@@ -63,7 +63,7 @@ export default function TabNavigator() {
         headerTitle: '',
         tabBarIcon: iconProps => TabNavigatorIcon({...iconProps, route}),
         tabBarLabel: () => null,
-        tabBarActiveTintColor: '#C67C4E',
+        tabBarActiveTintColor: 'rgba(198, 124, 78, 1)',
         tabBarInactiveTintColor: '#8D8D8D',
         tabBarStyle: {
           backgroundColor: 'white',
@@ -88,8 +88,8 @@ const styles = StyleSheet.create({
   tabBarIconIndicator: {
     width: 10,
     height: 5,
-    backgroundColor: '##C67C4E',
+    backgroundColor: 'rgba(198, 124, 78, 1)',
     marginTop: 2,
-    borderRadius: 5,
+    borderRadius: 10,
   },
 });

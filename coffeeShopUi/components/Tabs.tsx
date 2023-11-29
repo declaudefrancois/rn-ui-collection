@@ -4,22 +4,45 @@ import Button from './Button';
 import Styledtext from './Styledtext';
 import theme from '../constants/theme';
 
-interface TabsProps {
+interface TabsProps extends React.ComponentProps<typeof View> {
   activeTab?: number;
   items: {
     id: number;
     title: string;
   }[];
   onTabPress: (id: number) => void;
+  activeColor?: string;
+  inactiveColor?: string;
+  activeColorText?: string;
+  inactiveColorText?: string;
+  tabItemStyle?: React.ComponentProps<typeof Button>['style'];
+  tabItemActiveStyle?: React.ComponentProps<typeof Button>['style'];
+  containerScrollPadding?: boolean;
 }
-export default function Tabs({items, onTabPress, activeTab}: TabsProps) {
+export default function Tabs({
+  items,
+  onTabPress,
+  activeTab,
+  activeColor = theme.colors.main,
+  inactiveColor = '#fff',
+  activeColorText = '#fff',
+  inactiveColorText,
+  tabItemActiveStyle,
+  tabItemStyle,
+  containerScrollPadding = true,
+  style = {},
+  ...props
+}: TabsProps) {
   return (
     <ScrollView
       horizontal
       showsVerticalScrollIndicator={false}
       showsHorizontalScrollIndicator={false}
-      contentContainerStyle={styles.containerScroll}>
-      <View style={styles.container}>
+      contentContainerStyle={[
+        styles.containerScroll,
+        containerScrollPadding ? {paddingRight: 20, paddingLeft: 25} : {},
+      ]}>
+      <View style={[style, styles.container]} {...props}>
         {items.map(item => {
           const isActive = activeTab === item.id;
           return (
@@ -27,8 +50,11 @@ export default function Tabs({items, onTabPress, activeTab}: TabsProps) {
               onPress={() => onTabPress(item.id)}
               key={item.title}
               size="md"
-              bg={isActive ? theme.colors.main : '#fff'}>
-              <Styledtext color={isActive ? '#fff' : undefined}>
+              bg={isActive ? activeColor : inactiveColor}
+              style={isActive ? tabItemActiveStyle : tabItemStyle}>
+              <Styledtext
+                color={isActive ? activeColorText : inactiveColorText}
+                weight={isActive ? 'extraBold' : 'regular'}>
                 {item.title}
               </Styledtext>
             </Button>
@@ -44,5 +70,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     gap: 10,
   },
-  containerScroll: {paddingRight: 20, paddingLeft: 25},
+  containerScroll: {
+    minWidth: '100%',
+  },
 });

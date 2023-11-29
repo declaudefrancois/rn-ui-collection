@@ -18,7 +18,7 @@ import ArrowDown from '../../components/icons/ArrowDown';
 import SearchNormalIcon from '../../components/icons/SearchNormalIcon';
 import Button from '../../components/Button';
 import FilterIconts from '../../components/icons/FilterIcon';
-import CoffeeKindTabs from '../../components/CoffeeKindTabs';
+import CoffeeKindTabs from '../../components/coffees/CoffeeKindTabs';
 import CoffeeList from '../../components/coffees/CoffeeList';
 import {COFFEES} from '../../data/coffee';
 import PromoBanner from '../../components/PromoBanner';
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
   main: {
     position: 'relative',
     alignItems: 'center',
-    top: -85,
+    top: -70,
     flex: 1,
     gap: 20,
   },
@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
   headerContainer: {
     paddingTop: 25,
     paddingHorizontal: 25,
-    height: 280,
+    height: 260,
     backgroundColor: 'rgba(19, 19, 19, 1)',
     gap: 30,
   },

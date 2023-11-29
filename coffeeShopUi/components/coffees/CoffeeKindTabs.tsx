@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Tabs from './Tabs';
+import Tabs from '../Tabs';
 
 const tabItems = [
   {

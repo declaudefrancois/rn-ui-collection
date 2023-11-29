@@ -10,7 +10,7 @@ import Svg, {
   Use,
   Image,
 } from 'react-native-svg';
-const SvgComponent = (props: SvgProps) => (
+const MilkIcon = (props: SvgProps) => (
   <Svg width={24} height={24} fill="none" {...props}>
     <Mask
       id="b"
@@ -26,7 +26,14 @@ const SvgComponent = (props: SvgProps) => (
       <Path fill="url(#a)" d="M2 2h20v20H2z" />
     </Mask>
     <G mask="url(#b)">
-      <Rect width={20} height={20} x={2} y={2} fill="#C67C4E" rx={5} />
+      <Rect
+        width={20}
+        height={20}
+        x={2}
+        y={2}
+        fill="rgba(198, 124, 78, 1)"
+        rx={5}
+      />
     </G>
     <Defs>
       <Pattern
@@ -45,4 +52,4 @@ const SvgComponent = (props: SvgProps) => (
     </Defs>
   </Svg>
 );
-export default SvgComponent;
+export default MilkIcon;

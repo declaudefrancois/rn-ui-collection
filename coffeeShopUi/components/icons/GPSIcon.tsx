@@ -1,16 +1,22 @@
 import * as React from 'react';
 import Svg, {SvgProps, Path} from 'react-native-svg';
-const SvgComponent = (props: SvgProps) => (
-  <Svg width={24} height={24} fill="none" {...props}>
+
+const GPSIcon = ({
+  width = 24,
+  stroke = '#292D32',
+  height = 24,
+  ...props
+}: SvgProps) => (
+  <Svg width={width} height={height} fill="none" {...props}>
     <Path
-      stroke="#292D32"
+      stroke={stroke}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={1.5}
       d="M12 19.5a7.5 7.5 0 1 0 0-15 7.5 7.5 0 0 0 0 15Z"
     />
     <Path
-      stroke="#292D32"
+      stroke={stroke}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={1.5}
@@ -18,4 +24,4 @@ const SvgComponent = (props: SvgProps) => (
     />
   </Svg>
 );
-export default SvgComponent;
+export default GPSIcon;

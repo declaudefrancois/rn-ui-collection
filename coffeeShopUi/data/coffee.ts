@@ -11,6 +11,8 @@ export interface Coffee {
   price: number;
   supplement: string;
   image: ImageRequireSource | string;
+  description: string;
+  rating: number;
 }
 
 export const COFFEES: Coffee[] = [
@@ -20,6 +22,9 @@ export const COFFEES: Coffee[] = [
     price: 4.53,
     name: 'Cappuccino',
     supplement: 'with chocolate',
+    description:
+      'A cappuccino is an approximately 150 ml (5 oz) beverage, with 25 ml of espresso coffee and 85ml of fresh milk the.  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, quos?',
+    rating: 4.8,
   },
   {
     id: 2,
@@ -27,6 +32,9 @@ export const COFFEES: Coffee[] = [
     price: 3.9,
     name: 'Cappuccino',
     supplement: 'with Oat Milk',
+    rating: 4.9,
+    description:
+      'A cappuccino is an approximately 150 ml (5 oz) beverage, with 25 ml of espresso coffee and 85ml of fresh milk the.  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, quos?',
   },
   {
     id: 3,
@@ -34,6 +42,9 @@ export const COFFEES: Coffee[] = [
     price: 4.53,
     name: 'Cappuccino',
     supplement: 'with Oat Milk',
+    rating: 4.5,
+    description:
+      'A cappuccino is an approximately 150 ml (5 oz) beverage, with 25 ml of espresso coffee and 85ml of fresh milk the.  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, quos?',
   },
   {
     id: 4,
@@ -41,5 +52,8 @@ export const COFFEES: Coffee[] = [
     price: 4.53,
     name: 'Cappuccino',
     supplement: 'with chocolate',
+    rating: 4.0,
+    description:
+      'A cappuccino is an approximately 150 ml (5 oz) beverage, with 25 ml of espresso coffee and 85ml of fresh milk the.  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, quos?',
   },
 ];

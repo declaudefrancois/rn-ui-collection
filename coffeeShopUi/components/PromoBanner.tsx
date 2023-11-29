@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
   image: {
     flex: 1,
     width: '100%',
-    height: 170,
+    height: 140,
     borderRadius: 16,
     resizeMode: 'cover',
   },
@@ -49,9 +49,7 @@ const styles = StyleSheet.create({
     paddingVertical: 15,
     justifyContent: 'space-between',
   },
-  imageText: {
-    gap: 8,
-  },
+  imageText: {},
   promoBtn: {
     width: 70,
   },

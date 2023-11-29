@@ -3,7 +3,7 @@ import Svg, {SvgProps, Path} from 'react-native-svg';
 const HomeIcon = ({
   width = 24,
   height = 24,
-  fill = '#C67C4E',
+  fill = 'rgba(198, 124, 78, 1)',
   ...props
 }: SvgProps) => (
   <Svg width={width} height={height} fill="none" {...props}>

@@ -32,8 +32,8 @@ const sizes = {
   },
   lg: {
     borderRadius: 13,
-    minHeight: 60,
-    padding: 21,
+    minHeight: 50,
+    padding: 20,
   },
 } as const;
 

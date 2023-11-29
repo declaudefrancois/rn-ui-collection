@@ -29,7 +29,7 @@ const Bike = (props: SvgProps) => (
       />
     </Mask>
     <G mask="url(#b)">
-      <Path fill="#C67C4E" d="M29.333 2.667H2.666v26.667h26.667z" />
+      <Path fill="rgba(198, 124, 78, 1)" d="M29.333 2.667H2.666v26.667h26.667z" />
     </G>
     <Defs>
       <Pattern
