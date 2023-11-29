@@ -4,7 +4,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {StatusBar} from 'react-native';
 import {enableLatestRenderer} from 'react-native-maps';
 
-import StackNavigator from './navigators/StackNavigator';
+import StackNavigator from './src/navigators/StackNavigator';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 
 enableLatestRenderer();

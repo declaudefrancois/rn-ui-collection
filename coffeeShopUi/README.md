@@ -4,6 +4,27 @@ Coffe shop UI inspired by this [figma design](https://www.figma.com/file/rRB066A
 
 Project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
+
+# Demo
+https://github.com/declaudefrancois/rn-ui-collection/tree/main/coffeeShopUi/demo/demo.webm
+
+# Screenshots
+
+## onboarding
+![Onboarding](demo/onboarding.png)
+
+## Home
+![Home](demo/home.png)
+
+## Coffee Details
+![Coffee Details](demo/details.png)
+
+## order
+![Order](demo/order.png)
+
+## order delivery (map)
+![Order Delivery](demo/delivery.png)
+
 # Getting Started
 
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
